@@ -35,6 +35,7 @@ data-kaiwa4.js
 data-kaiwa5.js
 data-kaiwa6.js
 data-phonics2.js
+data-phonics-lec.js
 data-eiken1.js
 data-eiken2.js
 data-eiken3.js

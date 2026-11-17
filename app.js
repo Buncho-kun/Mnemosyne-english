@@ -14,7 +14,7 @@ const CATS=[
   {id:'word',t:'単語・熟語',s:'単語・熟語・語源',secs:[['単語：レベル別（難易度順）',['lv1','lv2','lv3','lv4','lv5']],['単語：出典別（入試・英検・TOEFL）',['kiso','jb','juken','jx','p1','e1','tw']],['単語：分野別',['ac','acp']],['熟語：大学入試',['jk','jid']],['熟語：英検準1級',['p1i']],['熟語：TOEFL ITP',['ti']],['語源：語根・語源・派生語',['roots','etym','deriv']]]},
   {id:'gram',t:'文法・語法',s:'4択・並べ替え・誤り指摘・ミス対策',secs:[['文法・語法：大学入試',['jg','jgh','jo']],['文法・語法：TOEFL ITP',['tu','ts','te']],['ミス対策：似ている単語・よくある誤り',['conf','confq','errtf']]]},
   {id:'rw',t:'読む・書く',s:'英文解釈・長文読解・英作文',secs:[['英文解釈：① 講義を読む → ② 構文の例文',['kaishaku','krei']],['長文読解：入試・TOEFL',['jr','tr']],['英作文：① 講義を読む → ② 例文を覚える',['eisaku','wrei']],['英作文：演習',['wtr','wfree','summ']],['英作文：カード',['wtips','wexp']]]},
-  {id:'oral',t:'聞く・話す',s:'英会話フレーズ・リスニング・話す練習・発音',secs:[['会話フレーズ：基本のやりとり',['kw1','kw2','kw3','kw4','kw12']],['会話フレーズ：場面別',['kw9','kw10','kw11','kw5','kw6','kw17','kw7','kw16','kw13']],['会話フレーズ：人・口語表現',['kw14','kw8','kw15']],['会話フレーズ：フォーマルな場面（発表・会議・仕事）',['kw18','kw19','kw20','kw21','kw22']],['話す：音読・シャドーイング・AIと会話',['spk','rp']],['リスニング：聞き取り（4択）',['lw','lp','lq']],['リスニング：書き取り',['ld']],['リスニング：長文を聞く',['jr','tr']],['発音：フォニックス',['phonics']]]},
+  {id:'oral',t:'聞く・話す',s:'英会話フレーズ・リスニング・話す練習・発音',secs:[['会話フレーズ：基本のやりとり',['kw1','kw2','kw3','kw4','kw12']],['会話フレーズ：場面別',['kw9','kw10','kw11','kw5','kw6','kw17','kw7','kw16','kw13']],['会話フレーズ：人・口語表現',['kw14','kw8','kw15']],['会話フレーズ：フォーマルな場面（発表・会議・仕事）',['kw18','kw19','kw20','kw21','kw22']],['話す：音読・シャドーイング・AIと会話',['spk','rp']],['リスニング：聞き取り（4択）',['lw','lp','lq']],['リスニング：書き取り',['ld']],['リスニング：長文を聞く',['jr','tr']],['発音：フォニックス（講義 → 練習カード）',['phl','phonics']]]},
 ];
 const SHORT={kw1:'あいさつ・相づち・返事',kw2:'気持ち・感情を伝える',kw3:'頼む・誘う・提案・断る',kw4:'意見を言う・会話をつなぐ',kw5:'買い物・レストラン',kw6:'旅行・道案内・交通',kw7:'学校・仕事・電話・体調',kw8:'句動詞・口語表現',kw9:'家・家族・毎日の生活',kw10:'友だちとの雑談・趣味・週末',kw11:'天気・季節・時間・予定',kw12:'トラブル・謝る・苦情',kw13:'SNS・メッセージ・メール',kw14:'人間関係・人について話す',kw15:'ネイティブらしい決まり文句',kw16:'健康・病院・身体',kw17:'道案内（尋ねる・教える）',kw18:'プレゼンテーション',kw19:'学会発表・質疑応答',kw20:'会議・ディスカッション',kw21:'ビジネスのメール・電話',kw22:'学会・交流会での会話',kiso:'① 高校基礎単語',jb:'② 入試基本単語',juken:'③ 入試重要単語',jx:'④ 入試単語・拡張',tw:'TOEFL 英単語',p1:'⑤ 英検準1級 単語',e1:'⑥ 英検1級・上級 単語',ac:'アカデミック単語',acp:'論文・研究の表現',
   jk:'入試 重要熟語',jid:'入試 イディオム・構文',ti:'TOEFL イディオム',p1i:'英検準1級 熟語・句動詞',
@@ -22,7 +22,7 @@ const SHORT={kw1:'あいさつ・相づち・返事',kw2:'気持ち・感情を�
   jg:'入試 文法（4択）',jgh:'入試 語法（4択）',jo:'入試 語句整序',tu:'TOEFL 語法',ts:'TOEFL Structure',te:'TOEFL Written Expression',
   conf:'似ている単語の区別',confq:'紛らわしい単語ドリル',errtf:'よくあるミス 正誤判定',
   kaishaku:'英文解釈の講義（構文）',jr:'入試 長文読解',tr:'TOEFL リーディング',
-  eisaku:'英作文の講義（表現と論理構成）',lw:'単語の聞き取り',spk:'音読・シャドーイング',rp:'AIと会話（ロールプレイ）',summ:'要約（英検準1級形式）',lp:'会話フレーズの聞き取り',lq:'応答を選ぶ',ld:'書き取り',wrei:'例文暗記（和→英）',krei:'構文の例文（英→和）',wtr:'和文英訳',wfree:'自由英作文',wtips:'考え方の型',wexp:'使える表現'};
+  eisaku:'英作文の講義（表現と論理構成）',phl:'フォニックスの講義（16回）',lw:'単語の聞き取り',spk:'音読・シャドーイング',rp:'AIと会話（ロールプレイ）',summ:'要約（英検準1級形式）',lp:'会話フレーズの聞き取り',lq:'応答を選ぶ',ld:'書き取り',wrei:'例文暗記（和→英）',krei:'構文の例文（英→和）',wtr:'和文英訳',wfree:'自由英作文',wtips:'考え方の型',wexp:'使える表現'};
 function catsNow(){
   const cs=CATS.map(c=>({...c,secs:c.secs.map(([h,ids])=>[h,ids.filter(id=>byId[id])]).filter(s=>s[1].length)}));
   const used=new Set(cs.flatMap(c=>c.secs.flatMap(s=>s[1])));
@@ -207,6 +207,9 @@ function planInfo(){
     const st=a.decks.filter(id=>K.per[id]&&K.per[id].length).map(id=>{const ks=K.per[id];let n=0;for(const k of ks){const v=sn[k];if(v!=null&&v>=from)n++}return {id,n,N:ks.length,r:n/ks.length}});
     const open=st.filter(x=>x.n<x.N);let rec=null;
     if(open.length)rec=a.seq?open[0]:open.slice().sort((x,y)=>x.r-y.r)[0];
+    if(a.id==='phon'&&byId.phl){const ls=byId.phl.items;for(let li=0;li<ls.length;li++){const l=ls[li];const ks=byId.phonics.items.filter(i=>l.cards.includes(i.cat));
+      const read=S.ls&&S.ls[l.k],cardsDone=ks.every(i=>{const v=sn[i.k];return v!=null&&v>=from});if(read&&cardsDone)continue;
+      rec={id:'phl',li,label:l.no+(read?' 練習カード':' 講義を読む')+'：'+l.title};break}}
     if(a.id==='write'&&byId.eisaku){const es=byId.eisaku;for(let li=0;li<es.items.length;li++){const l=es.items[li];
       if(l.drills.every(x=>{const v=sn[x.k];return v!=null&&v>=from}))continue;
       const rx=reiOf('eisaku',li),need=rx.some(x=>!reiOK(x));rec={id:'eisaku',li,step:need?'rei':'drill',label:l.no+(need?' 例文を覚える':' 例題を書く')};break}}
@@ -237,7 +240,7 @@ function planRow(a,pi){
   else if(a.left===0){right='<span class="pdone">今日は完了</span>';sub=a.rec?`次：${esc(a.rec.label||SHORT[a.rec.id]||byId[a.rec.id].title)}`:''}
   else{right=`<span class="pleft">あと <b>${a.left}</b></span>`;sub=a.rec?esc(a.rec.label||SHORT[a.rec.id]||byId[a.rec.id].title)+(a.behind>a.rate?`・遅れ ${a.behind}`:a.behind>0?`・遅れ ${a.behind}`:''):''}
   const p=Math.round(a.done/a.N*100);
-  const tgt=a.lap&&a.left&&a.rec?`data-act="planlis" data-v="${a.rec.id}"`:a.wp&&(a.left||a.rv)?`data-act="planword" data-v="${a.id}"`:fin||!a.rec?`data-act="cat0" data-v="${a.cat}"`:a.rec.li!=null?`data-act="planles" data-v="${a.rec.li}"`:`data-act="plango" data-v="${a.rec.id}" data-c="${a.cat}"`;
+  const tgt=a.rec&&a.rec.id==='phl'&&!fin?`data-act="planles" data-v="${a.rec.li}" data-d="phl"`:a.lap&&a.left&&a.rec?`data-act="planlis" data-v="${a.rec.id}"`:a.wp&&(a.left||a.rv)?`data-act="planword" data-v="${a.id}"`:fin||!a.rec?`data-act="cat0" data-v="${a.cat}"`:a.rec.li!=null?`data-act="planles" data-v="${a.rec.li}"`:`data-act="plango" data-v="${a.rec.id}" data-c="${a.cat}"`;
   return `<button class="deck prow" ${tgt}><div class="t"><span>${esc(a.t)}${a.lap?`<small class="pp">${a.lap.i+1}/${a.lap.n}周・${rateName(a.lap.rate)}</small>`:''}</span>${right}</div>${sub?`<div class="s">${sub}</div>`:''}<div class="bar"><i style="width:${p}%"></i></div></button>`;
 }
 function planHome(){
@@ -317,10 +320,10 @@ function deckView(){
     if(d.custom)h+=`<button class="btn" data-act="deldeck" style="color:var(--warn)">${V.confirm?'本当に削除する（もう一度押す）':'この単語帳を削除'}</button>`;
   }else if(d.type==='lesson'){
     const s=qstat(qitems(d));
-    h+=`<div class="stats"><div class="stat"><b>${Object.keys(S.ls||{}).filter(k=>d.items.some(l=>l.k===k)).length}</b><span>読んだ課</span></div><div class="stat"><b>${s.ok}</b><span>例題○</span></div><div class="stat"><b>${s.ng}</b><span>要復習</span></div></div>`;
+    h+=`<div class="stats"><div class="stat"><b>${Object.keys(S.ls||{}).filter(k=>d.items.some(l=>l.k===k)).length}</b><span>読んだ課</span></div>${s.total?`<div class="stat"><b>${s.ok}</b><span>例題○</span></div><div class="stat"><b>${s.ng}</b><span>要復習</span></div>`:`<div class="stat"><b>${d.items.length}</b><span>全${d.items.length}回</span></div>`}</div>`;
     if(s.ng)h+=`<button class="btn" data-act="mcw">要復習の例題だけ解く<small>${s.ng}問</small></button>`;
     h+='<div class="grp">'+d.items.map((l,i)=>{const st=qstat(l.drills),rd=S.ls&&S.ls[l.k];
-      return `<button class="deck" data-act="lesson" data-v="${i}"><div class="t"><span>${esc(l.no)}　${esc(l.title)}</span>${rd?`<span class="badge" style="background:var(--soft);color:var(--acc)">${st.ok} / ${st.total}</span>`:''}</div><div class="s">${esc(l.sub)}・例題 ${l.drills.length}問</div><div class="bar"><i style="width:${st.total?st.ok/st.total*100:0}%"></i></div></button>`}).join('')+'</div>';
+      return `<button class="deck" data-act="lesson" data-v="${i}"><div class="t"><span>${esc(l.no)}　${esc(l.title)}</span>${rd?`<span class="badge" style="background:var(--soft);color:var(--acc)">${st.total?`${st.ok} / ${st.total}`:'読んだ'}</span>`:''}</div><div class="s">${esc(l.sub)}${l.drills.length?`・例題 ${l.drills.length}問`:''}</div>${st.total?`<div class="bar"><i style="width:${st.ok/st.total*100}%"></i></div>`:''}</button>`}).join('')+'</div>';
   }else if(d.type==='read'){
     const s=qstat(qitems(d));
     h+=`<div class="stats"><div class="stat"><b>${s.ok}</b><span>正解済み</span></div><div class="stat"><b>${s.ng}</b><span>要復習</span></div><div class="stat"><b>${s.total-s.ok-s.ng}</b><span>未着手</span></div></div>`;
@@ -345,15 +348,15 @@ function deckView(){
 function lmark(s){return esc(s).replace(/\*\*(.+?)\*\*/g,'<b>$1</b>').replace(/\{(.+?)\}/g,'<u>$1</u>').replace(/\[\[(.+?)\]\]/g,'<span class="hl">$1</span>')}
 function lessonBody(src,hide,hideEn){
   let h='',tb=null,ex=0;
-  const flush=()=>{if(tb){h+=`<div class="ltab">${tb.cap?`<div class="cap">${lmark(tb.cap)}</div>`:''}<table>${tb.rows.map(r=>'<tr>'+r.map((c,j)=>`<td class="${j===0?'en':''}">${lmark(c)}</td>`).join('')+'</tr>').join('')}</table></div>`;tb=null}};
+  const flush=()=>{if(tb){h+=`<div class="ltab">${tb.cap?`<div class="cap">${lmark(tb.cap)}</div>`:''}<table>${tb.rows.map(r=>'<tr>'+r.map((c,j)=>{const pc=String(c).replace(/\*\*|[{}]/g,'');const sp=/^[A-Za-z][A-Za-z ,'’\/\-\.()?!↗↘]*$/.test(pc)&&/[A-Za-z]{3}/.test(pc);return `<td class="${j===0?'en':''}${sp?' sayc':''}${pc.length<=6?' nw':''}"${sp?` data-act="say" data-v="${esc(pc.replace(/[↗↘]/g,'').replace(/\s*\/\s*/g,', '))}"`:''}>${lmark(c)}${sp?' <span class="sayi">▶</span>':''}</td>`}).join('')+'</tr>').join('')}</table></div>`;tb=null}};
   for(const raw of src.split('\n')){const l=raw.trim();if(!l)continue;
     if(l[0]==='|'){if(!tb)tb={rows:[]};tb.rows.push(l.slice(1).split('|').map(x=>x.trim()));continue}
     if(l[0]==='['&&l.endsWith(']')&&!l.startsWith('[[')){flush();tb={cap:l.slice(1,-1),rows:[]};continue}
     flush();
     const t=l.slice(0,2),r=l.slice(2);
     if(t==='# ')h+=`<h3 class="lh">${lmark(r)}</h3>`;
-    else if(t==='= '||t==='- '){const [no,en,ja]=r.split('|');const id='lx'+(ex++);
-      h+=`<div class="lex ${t==='= '?'main':''}"><span class="no">${esc(no)}</span><div>${hideEn?`<div class="lja" style="color:var(--ink)">${lmark(ja||'')}</div><div class="en lja ${hide?'hid':''}" data-act="ljt" style="color:var(--ink)">${lmark(en)}</div>`:`<div class="en">${lmark(en)}</div><div class="lja ${hide?'hid':''}" data-act="ljt">${lmark(ja||'')}</div>`}</div></div>`}
+    else if(t==='= '||t==='- '){const [no,en,ja]=r.split('|');const id='lx'+(ex++);const pl=String(en).replace(/\*\*|\[\[|\]\]|[{}]/g,'').replace(/\s*\/\s*/g,', ');
+      h+=`<div class="lex ${t==='= '?'main':''}"><span class="no">${esc(no)}</span><span class="ib sm lsay" data-act="say" data-v="${esc(pl)}">▶</span><div>${hideEn?`<div class="lja" style="color:var(--ink)">${lmark(ja||'')}</div><div class="en lja ${hide?'hid':''}" data-act="ljt" style="color:var(--ink)">${lmark(en)}</div>`:`<div class="en">${lmark(en)}</div><div class="lja ${hide?'hid':''}" data-act="ljt">${lmark(ja||'')}</div>`}</div></div>`}
     else if(t==='x ')h+=`<div class="lng"><span>×</span> <span class="en">${lmark(r)}</span></div>`;
     else if(t==='o ')h+=`<div class="lok"><span>○</span> <span class="en">${lmark(r)}</span></div>`;
     else if(t==='> ')h+=`<div class="lpt">${lmark(r)}</div>`;
@@ -370,6 +373,8 @@ function lessonView(){
   h+=`<div class="chips seg"><button class="chip ${V.hide?'':'on'}" data-act="lhide" data-v="0">${comp?'英文を表示':'訳を表示'}</button><button class="chip ${V.hide?'on':''}" data-act="lhide" data-v="1">${comp?'英文を隠す':'訳を隠す'}</button></div>`;
   h+=`<div class="lesson">${lessonBody(l.body,V.hide,comp&&V.hide)}</div>`;
   const st=qstat(l.drills),rx=reiOf(d.id,V.li),rm=rx.filter(reiOK).length,needRei=rx.length&&rm<rx.length&&!V.skipRei;
+  if(!l.drills.length){if(l.cards&&byId.phonics){const n=byId.phonics.items.filter(i=>l.cards.includes(i.cat)).length;h+=`<button class="btn p" data-act="lcards" data-v="${V.li}">この回の練習カード（${n}枚）<small>つづりを見て音を言い、▶で確かめる</small></button>`}
+    if(V.li+1<d.items.length)h+=`<button class="btn" data-act="lesson" data-v="${V.li+1}">次の回へ：${esc(d.items[V.li+1].title)}</button>`;return h}
   if(rx.length)h+=`<button class="btn ${needRei?'p':''} rei" data-act="reiflash" data-v="${V.li}">① 例文を覚える（${rx.length}文・和→英）<small>${rm===rx.length?'すべて覚えました・もう一度確認する':`覚えた ${rm} / ${rx.length}　日本語を見て英文を言えるまで`}</small></button>`;
   if(needRei){h+=`<p class="lock">例文をすべて「覚えた」にすると、例題に進めます。</p><button class="btn ghost" data-act="skiprei">例文を飛ばして例題を解く</button>`;}
   else h+=`<button class="btn p" data-act="ldrill">${rx.length?'② ':''}例題を解く（${l.drills.length}問）<small>${l.drills[0]&&l.drills[0].kind==='ej'?'和訳を書いて、訳例・解説と照合':'英訳を書いて、解答例・解説と照合'}・○ ${st.ok}</small></button>`;
@@ -828,7 +833,7 @@ document.addEventListener('click',e=>{
     case 'bkpaste': {const t=document.getElementById('bkText');if(t&&t.value.trim())bkLoad(t.value.trim());break}
     case 'planword': startPlanWord(v);break;
     case 'planrei': startReiReview();break;
-    case 'planles': OSEC.rw='英作文';go({name:'lesson',id:'eisaku',li:+v,from:'rw'});break;
+    case 'planles': if(el.dataset.d==='phl'){OSEC.oral='発音';go({name:'lesson',id:'phl',li:+v,from:'oral'})}else{OSEC.rw='英作文';go({name:'lesson',id:'eisaku',li:+v,from:'rw'})}break;
         case 'plango': {const c=catsNow().find(x=>x.id===el.dataset.c);const sec=c&&c.secs.find(x=>x[1].includes(v));if(sec)OSEC[el.dataset.c]=sec[0].split('：')[0];go({name:'deck',id:v,st:-1,cat:'',from:el.dataset.c});break}
     case 'planstart': S.plan={start:today(),seen:{}};PK=null;SCH=null;save();go({name:'home'});break;
     case 'skipday': if(S.plan){const d=+v;S.plan.skip=S.plan.skip||{};if(S.plan.skip[d])delete S.plan.skip[d];else S.plan.skip[d]=1;save();render()}break;
@@ -871,6 +876,7 @@ document.addEventListener('click',e=>{
     case 'ljt': el.classList.toggle('hid');break;
     case 'ldrill': startLessonDrill();break;
     case 'reiflash': {const li=+v;if(V.name!=='lesson'){V={name:'lesson',id:'eisaku',li,from:'rw'}}startReiFlash(li);break}
+    case 'lcards': {const l=byId[V.id].items[+v];const q=byId.phonics.items.filter(i=>l.cards.includes(i.cat));ses={type:'flash',d:{id:'phonics',title:l.no+' 練習カード'},dir:'ej',queue:q.slice(),i:0,flip:false,cnt:[0,0,0],rep:{},ahead:false,first:q.length,again:'lcards',againV:v};render();window.scrollTo(0,0);break}
     case 'skiprei': V.skipRei=1;render();break;
     case 'rans': readAnswer(+v);break;
     case 'next': next();break;
